@@ -14,7 +14,6 @@ public partial class DemoContainer
 		Demo.EntityEvents.CCSTeam.AddChangeCallback(team => team.Score,
 			(team, _, newScore) =>
 			{
-				GD.Print("Score changed");
 				ScoreChangedEventHandler?.Invoke(this, (team.CSTeamNum, newScore));
 			}
 		);

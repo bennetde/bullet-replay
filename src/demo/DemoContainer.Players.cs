@@ -30,10 +30,8 @@ public partial class DemoContainer
 			PlayerControllerCreatedEventHandler?.Invoke(this, controller);
 			if (controller.PlayerPawn == null)
 			{
-				GD.Print("Pawn null");
 				return;
 			}
-			GD.Print(string.Join(",", controller.PlayerPawn.Weapons));
 			PlayerSetItemsEventHandler?.Invoke(this, (controller, controller.PlayerPawn.Weapons));
 		};
 		
@@ -117,7 +115,6 @@ public partial class DemoContainer
 
 		Demo.Source1GameEvents.ItemRemove += e =>
 		{
-			GD.Print($"Item remove {e.Item}");
 			// GD.Print($"{e.Player.PlayerName} removed up {e.Item}");
 		};
 		

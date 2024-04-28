@@ -17,20 +17,17 @@ public partial class BombEntity : Entity
 		Sprite = GetNode<Sprite2D>("Sprite");
 		DemoContainer.BombCreatedEventHandler += (_, e) =>
 		{
-			GD.Print("Loaded Bomb");
 			Sprite.CallDeferred(CanvasItem.MethodName.SetVisible, true);
 			CallDeferred(Entity.MethodName.SetPosition, new Vector2(e.Origin.X, e.Origin.Y));
 		};
 
 		DemoContainer.BombDeletedEventHandler += (_, e) =>
 		{
-			GD.Print("Deleted Bomb");
 			Sprite.CallDeferred(CanvasItem.MethodName.SetVisible, false);
 		};
 
 		DemoContainer.BombMovedEventHandler += (_, e) =>
 		{
-			GD.Print("Move Bomb");
 			CallDeferred(Entity.MethodName.SetPosition, new Vector2(e.Origin.X, e.Origin.Y));
 		};
 

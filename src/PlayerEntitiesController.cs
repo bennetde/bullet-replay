@@ -39,7 +39,6 @@ public partial class PlayerEntitiesController : Node
 
 	public void SetPlayers(IEnumerable<CCSPlayerController> controllers)
 	{
-		GD.Print($"Setting new players: {controllers.Count()}");
 		foreach (var controller in controllers)
 		{
 			if (controller.PlayerPawn == null)

@@ -13,14 +13,8 @@ public partial class FileMenu : PopupMenu
 
     private void on_id_pressed(long id)
     {
-        GD.Print("ID Pressed: " + id);
         if(id == 0) {
             fileDialog.Show();
         }
-    }
-
-
-    public void Test() {
-        GD.Print("Test");
     }
 }

@@ -83,12 +83,10 @@ public partial class MatchInfoPanel : Panel
 
 	public void SetPlayers(IEnumerable<CCSPlayerController> controllers)
 	{
-		GD.Print("SetPlayers in MatchInfoPanel");
 		foreach (var controller in controllers)
 		{
 			if (controller.PlayerPawn == null)
 			{
-				GD.Print($"{controller.PlayerName} has no Pawn");
 				continue;
 			}
 
@@ -158,7 +156,6 @@ public partial class MatchInfoPanel : Panel
 	private void OnPlayerCreate(object sender, CCSPlayerController ctrl)
 	{
 		// if (pair.Item1.Controller == null) return;
-		GD.Print($"Creating player {ctrl.PlayerName}");
 		CallDeferred(MethodName.AddPlayer, ctrl.EntityIndex.Value, ctrl.PlayerName, (int)ctrl.CSTeamNum);
 	}
 
@@ -171,7 +168,7 @@ public partial class MatchInfoPanel : Panel
 		}
 		else
 		{
-			GD.PushWarning($"Didn't find {e.EntityIndex.Value}/{e.PlayerName}in OnPlayerDelete");
+			GD.PushWarning($"Didn't find {e.EntityIndex.Value}/{e.PlayerName} in OnPlayerDelete");
 		}
 	}
 

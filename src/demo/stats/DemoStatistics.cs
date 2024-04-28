@@ -33,7 +33,6 @@ public class DemoStatistics
 	{
 		var roundEndTick = Demo.CurrentDemoTick.Value;
 		var winningTeam = (CSTeamNumber)e.Winner;
-		GD.Print($"Round {Rounds.Count + 1} starts at {LatestRoundStartTick} and ends at {roundEndTick}");
 		Rounds.Add(new Round(LatestRoundStartTick, roundEndTick, winningTeam));
 	}
 

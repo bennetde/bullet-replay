@@ -55,9 +55,8 @@ public partial class DemoContainer : Control
 
 		Demo.Source1GameEvents.RoundEnd += e =>
 		{
-			if (this.WannaSeek) return;
+			if (WannaSeek) return;
 			CurrentRoundIndex += 1;
-			GD.Print($"Round ended, increased CurrentROund to {CurrentRoundIndex}");
 			SetRound(CurrentRoundIndex, false);
 		};
 
