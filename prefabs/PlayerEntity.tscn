@@ -1,0 +1,75 @@
+[gd_scene load_steps=10 format=3 uid="uid://dd1lhqr8qhl8j"]
+
+[ext_resource type="Script" path="res://src/PlayerEntity.cs" id="1_jqg7l"]
+[ext_resource type="Texture2D" uid="uid://ceiflqgrsyvwn" path="res://img/icons/dead.svg" id="2_rjql7"]
+[ext_resource type="Shader" path="res://shaders/PlayerShader.gdshader" id="3_4awsj"]
+[ext_resource type="Script" path="res://prefabs/ShootSprite.cs" id="3_dbqdd"]
+[ext_resource type="Texture2D" uid="uid://mvvbf37irnlv" path="res://img/icons/player.png" id="4_7wulu"]
+
+[sub_resource type="LabelSettings" id="LabelSettings_0ypdt"]
+font_size = 50
+
+[sub_resource type="ShaderMaterial" id="ShaderMaterial_3jusa"]
+resource_local_to_scene = true
+shader = ExtResource("3_4awsj")
+shader_parameter/health_perc = 1.0
+shader_parameter/rim_col = Color(1, 1, 1, 1)
+shader_parameter/rim_thickness = 0.895
+
+[sub_resource type="Gradient" id="Gradient_ecqvr"]
+colors = PackedColorArray(1, 1, 1, 1, 1, 1, 1, 1)
+
+[sub_resource type="GradientTexture2D" id="GradientTexture2D_3u8ub"]
+gradient = SubResource("Gradient_ecqvr")
+width = 10
+height = 10
+
+[node name="PlayerEntity" type="Node2D" node_paths=PackedStringArray("_sprite", "_deadSprite", "_shootSprite")]
+script = ExtResource("1_jqg7l")
+_terroristColor = Color(0.941176, 0.788235, 0.254902, 1)
+_counterTerroristColor = Color(0.352941, 0.721569, 0.956863, 1)
+_deathColor = Color(0.247059, 0.247059, 0.247059, 1)
+_sprite = NodePath("PlayerSprite")
+_deadSprite = NodePath("DeadSprite")
+_shootSprite = NodePath("PlayerSprite/ShootSprite")
+
+[node name="Label" type="Label" parent="."]
+anchors_preset = 5
+anchor_left = 0.5
+anchor_right = 0.5
+offset_left = -65.0
+offset_top = 8.0
+offset_right = 570.0
+offset_bottom = 77.0
+grow_horizontal = 2
+scale = Vector2(0.205, 0.205)
+size_flags_horizontal = 2
+text = "Name"
+label_settings = SubResource("LabelSettings_0ypdt")
+horizontal_alignment = 1
+vertical_alignment = 1
+
+[node name="DeadSprite" type="Sprite2D" parent="."]
+unique_name_in_owner = true
+visible = false
+modulate = Color(1, 1, 1, 0.435294)
+rotation = 1.5708
+scale = Vector2(0.03, 0.03)
+texture = ExtResource("2_rjql7")
+
+[node name="PlayerSprite" type="Sprite2D" parent="."]
+unique_name_in_owner = true
+material = SubResource("ShaderMaterial_3jusa")
+scale = Vector2(0.04, 0.04)
+texture = ExtResource("4_7wulu")
+
+[node name="ShootSprite" type="Sprite2D" parent="PlayerSprite"]
+visible = false
+position = Vector2(0, -8333.33)
+rotation = -1.5708
+scale = Vector2(1666.67, 6.58833)
+texture = SubResource("GradientTexture2D_3u8ub")
+script = ExtResource("3_dbqdd")
+
+[node name="Timer" type="Timer" parent="PlayerSprite/ShootSprite"]
+wait_time = 0.1

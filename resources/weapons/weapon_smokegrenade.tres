@@ -1,0 +1,13 @@
+[gd_resource type="Resource" load_steps=3 format=3 uid="uid://sev8bswe6rvq"]
+
+[ext_resource type="Texture2D" uid="uid://bk3yjetjtsulg" path="res://img/weapons/smokegrenade.svg" id="1_lhtnd"]
+[ext_resource type="Script" path="res://src/resources/Weapon.cs" id="2_0u2l8"]
+
+[resource]
+script = ExtResource("2_0u2l8")
+Label = "Smoke"
+Texture = ExtResource("1_lhtnd")
+IsSecondary = false
+GrenadeType = 3
+IsKnife = false
+IsC4 = false

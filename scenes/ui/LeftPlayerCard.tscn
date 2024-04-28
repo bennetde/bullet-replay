@@ -1,0 +1,137 @@
+[gd_scene load_steps=14 format=3 uid="uid://cao6viy7jgbmu"]
+
+[ext_resource type="Script" path="res://src/ui/PlayerCard.cs" id="1_itumm"]
+[ext_resource type="Resource" uid="uid://sb3gwbfec7dv" path="res://resources/cs_colors.tres" id="2_1i7nk"]
+[ext_resource type="Texture2D" uid="uid://08wu87g38thu" path="res://img/weapons/m4a1.svg" id="2_j55pb"]
+[ext_resource type="Resource" uid="uid://chiwpdmwju2fu" path="res://resources/weapons_dict.tres" id="3_bqshg"]
+[ext_resource type="Texture2D" uid="uid://b136tftrcgcup" path="res://img/weapons/usp_silencer.svg" id="3_nhgn4"]
+[ext_resource type="Texture2D" uid="uid://cx2r3xseat1d3" path="res://img/weapons/hegrenade.svg" id="6_pt61p"]
+[ext_resource type="Texture2D" uid="uid://bqvwwviqjs3mg" path="res://img/weapons/molotov.svg" id="7_xcqre"]
+[ext_resource type="Texture2D" uid="uid://v06a3fyhak37" path="res://img/weapons/flashbang.svg" id="8_i1eau"]
+[ext_resource type="Texture2D" uid="uid://bk3yjetjtsulg" path="res://img/weapons/smokegrenade.svg" id="9_1mpro"]
+
+[sub_resource type="StyleBoxFlat" id="StyleBoxFlat_h3egp"]
+bg_color = Color(0.619608, 0.619608, 0.619608, 1)
+draw_center = false
+
+[sub_resource type="StyleBoxFlat" id="StyleBoxFlat_rv62q"]
+
+[sub_resource type="FontVariation" id="FontVariation_temwr"]
+variation_embolden = 0.85
+
+[sub_resource type="LabelSettings" id="LabelSettings_y2u4a"]
+font = SubResource("FontVariation_temwr")
+
+[node name="LeftPlayerCard" type="VBoxContainer" node_paths=PackedStringArray("HealthLabel", "NameLabel", "KADLabel", "MoneyLabel", "HealthProgressBar", "PrimaryWeaponTexture", "SecondaryWeaponTexture", "MolotovTexture", "SmokeTexture", "HETexture", "FlashTexture")]
+script = ExtResource("1_itumm")
+HealthLabel = NodePath("ProgressBar/HBoxContainer/Label2")
+NameLabel = NodePath("ProgressBar/HBoxContainer/Label")
+KADLabel = NodePath("BoxContainer/KADLabel")
+MoneyLabel = NodePath("BoxContainer/MoneyLabel")
+HealthProgressBar = NodePath("ProgressBar")
+PrimaryWeaponTexture = NodePath("ProgressBar/HBoxContainer/MarginContainer/HBoxContainer/PrimaryWeaponTexture")
+SecondaryWeaponTexture = NodePath("ProgressBar/HBoxContainer/MarginContainer/HBoxContainer/SecondaryWeaponTexture")
+MolotovTexture = NodePath("BoxContainer/MarginContainer/HBoxContainer/MolotovTexture")
+SmokeTexture = NodePath("BoxContainer/MarginContainer/HBoxContainer/SmokeTexture")
+HETexture = NodePath("BoxContainer/MarginContainer/HBoxContainer/HETexture")
+FlashTexture = NodePath("BoxContainer/MarginContainer/HBoxContainer/FlashTexture")
+CSColors = ExtResource("2_1i7nk")
+WeaponsDictionary = ExtResource("3_bqshg")
+
+[node name="ProgressBar" type="ProgressBar" parent="."]
+custom_minimum_size = Vector2(300, 25)
+layout_mode = 2
+theme_override_styles/background = SubResource("StyleBoxFlat_h3egp")
+theme_override_styles/fill = SubResource("StyleBoxFlat_rv62q")
+value = 100.0
+show_percentage = false
+
+[node name="HBoxContainer" type="HBoxContainer" parent="ProgressBar"]
+layout_mode = 1
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+
+[node name="Label2" type="Label" parent="ProgressBar/HBoxContainer"]
+layout_mode = 2
+text = "100"
+label_settings = SubResource("LabelSettings_y2u4a")
+
+[node name="Label" type="Label" parent="ProgressBar/HBoxContainer"]
+layout_mode = 2
+text = "Name"
+
+[node name="MarginContainer" type="MarginContainer" parent="ProgressBar/HBoxContainer"]
+layout_mode = 2
+size_flags_horizontal = 3
+theme_override_constants/margin_top = 2
+theme_override_constants/margin_right = 5
+theme_override_constants/margin_bottom = 2
+
+[node name="HBoxContainer" type="HBoxContainer" parent="ProgressBar/HBoxContainer/MarginContainer"]
+layout_mode = 2
+theme_override_constants/separation = 10
+alignment = 2
+
+[node name="PrimaryWeaponTexture" type="TextureRect" parent="ProgressBar/HBoxContainer/MarginContainer/HBoxContainer"]
+visible = false
+layout_mode = 2
+texture = ExtResource("2_j55pb")
+expand_mode = 3
+
+[node name="SecondaryWeaponTexture" type="TextureRect" parent="ProgressBar/HBoxContainer/MarginContainer/HBoxContainer"]
+visible = false
+layout_mode = 2
+texture = ExtResource("3_nhgn4")
+expand_mode = 3
+
+[node name="BoxContainer" type="BoxContainer" parent="."]
+layout_mode = 2
+
+[node name="KADLabel" type="Label" parent="BoxContainer"]
+layout_mode = 2
+size_flags_horizontal = 0
+text = "0/0/0 KAD"
+
+[node name="MoneyLabel" type="Label" parent="BoxContainer"]
+layout_mode = 2
+size_flags_horizontal = 8
+text = "$0"
+
+[node name="MarginContainer" type="MarginContainer" parent="BoxContainer"]
+layout_mode = 2
+size_flags_horizontal = 3
+theme_override_constants/margin_top = 2
+theme_override_constants/margin_right = 5
+theme_override_constants/margin_bottom = 2
+
+[node name="HBoxContainer" type="HBoxContainer" parent="BoxContainer/MarginContainer"]
+layout_mode = 2
+theme_override_constants/separation = 10
+alignment = 2
+
+[node name="MolotovTexture" type="TextureRect" parent="BoxContainer/MarginContainer/HBoxContainer"]
+visible = false
+layout_mode = 2
+texture = ExtResource("7_xcqre")
+expand_mode = 3
+
+[node name="HETexture" type="TextureRect" parent="BoxContainer/MarginContainer/HBoxContainer"]
+visible = false
+layout_mode = 2
+texture = ExtResource("6_pt61p")
+expand_mode = 3
+
+[node name="FlashTexture" type="TextureRect" parent="BoxContainer/MarginContainer/HBoxContainer"]
+visible = false
+layout_mode = 2
+texture = ExtResource("8_i1eau")
+expand_mode = 3
+
+[node name="SmokeTexture" type="TextureRect" parent="BoxContainer/MarginContainer/HBoxContainer"]
+visible = false
+layout_mode = 2
+texture = ExtResource("9_1mpro")
+expand_mode = 3

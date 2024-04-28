@@ -1,0 +1,11 @@
+[gd_resource type="Resource" load_steps=3 format=3 uid="uid://c58f66j7yf2h6"]
+
+[ext_resource type="Texture2D" uid="uid://b7wi1mxfpn67j" path="res://img/weapons/m4a1_silencer.svg" id="1_dbnlj"]
+[ext_resource type="Script" path="res://src/resources/Weapon.cs" id="2_062ae"]
+
+[resource]
+script = ExtResource("2_062ae")
+Label = "M4A1-S"
+Texture = ExtResource("1_dbnlj")
+IsSecondary = false
+GrenadeType = 0

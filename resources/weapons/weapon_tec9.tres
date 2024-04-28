@@ -1,0 +1,13 @@
+[gd_resource type="Resource" load_steps=3 format=3 uid="uid://cywsq0gk21hc2"]
+
+[ext_resource type="Texture2D" uid="uid://bfyykq4dwic1k" path="res://img/weapons/tec9.svg" id="1_bccb8"]
+[ext_resource type="Script" path="res://src/resources/Weapon.cs" id="2_vafqh"]
+
+[resource]
+script = ExtResource("2_vafqh")
+Label = "Tec-9"
+Texture = ExtResource("1_bccb8")
+IsSecondary = true
+GrenadeType = 0
+IsKnife = false
+IsC4 = false

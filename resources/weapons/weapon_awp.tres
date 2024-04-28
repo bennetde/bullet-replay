@@ -1,0 +1,13 @@
+[gd_resource type="Resource" load_steps=3 format=3 uid="uid://sn0udym61nsi"]
+
+[ext_resource type="Texture2D" uid="uid://08wu87g38thu" path="res://img/weapons/m4a1.svg" id="1_u1umt"]
+[ext_resource type="Script" path="res://src/resources/Weapon.cs" id="2_m6rox"]
+
+[resource]
+script = ExtResource("2_m6rox")
+Label = "M4A4"
+Texture = ExtResource("1_u1umt")
+IsSecondary = false
+GrenadeType = 0
+IsKnife = false
+IsC4 = false

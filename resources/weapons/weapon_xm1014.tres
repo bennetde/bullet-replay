@@ -1,0 +1,13 @@
+[gd_resource type="Resource" load_steps=3 format=3 uid="uid://c277gtbmdmfyu"]
+
+[ext_resource type="Texture2D" uid="uid://c2ultlk0yr0su" path="res://img/weapons/xm1014.svg" id="1_bu5pu"]
+[ext_resource type="Script" path="res://src/resources/Weapon.cs" id="2_1l8tu"]
+
+[resource]
+script = ExtResource("2_1l8tu")
+Label = "XM1014"
+Texture = ExtResource("1_bu5pu")
+IsSecondary = false
+GrenadeType = 0
+IsKnife = false
+IsC4 = false

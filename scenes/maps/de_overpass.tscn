@@ -1,0 +1,7 @@
+[gd_scene load_steps=2 format=3 uid="uid://j36li0qyoblw"]
+
+[ext_resource type="Texture2D" uid="uid://d84i2l5ubgcu" path="res://img/maps/de_overpass_radar_psd.png" id="1_ev337"]
+
+[node name="Map" type="Sprite2D"]
+position = Vector2(512, 512)
+texture = ExtResource("1_ev337")

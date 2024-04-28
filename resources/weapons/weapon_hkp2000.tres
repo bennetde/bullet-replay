@@ -1,0 +1,13 @@
+[gd_resource type="Resource" load_steps=3 format=3 uid="uid://dd7d82p0rdko2"]
+
+[ext_resource type="Texture2D" uid="uid://bg6wbw8g6fy3y" path="res://img/weapons/hkp2000.svg" id="1_fn66d"]
+[ext_resource type="Script" path="res://src/resources/Weapon.cs" id="2_nckpd"]
+
+[resource]
+script = ExtResource("2_nckpd")
+Label = "P2000"
+Texture = ExtResource("1_fn66d")
+IsSecondary = true
+GrenadeType = 0
+IsKnife = false
+IsC4 = false

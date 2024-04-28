@@ -1,0 +1,13 @@
+[gd_resource type="Resource" load_steps=3 format=3 uid="uid://du1vo56fvhhi1"]
+
+[ext_resource type="Texture2D" uid="uid://b83a53dri3iut" path="res://img/weapons/knife_cord.svg" id="1_jcw7g"]
+[ext_resource type="Script" path="res://src/resources/Weapon.cs" id="2_w4qlh"]
+
+[resource]
+script = ExtResource("2_w4qlh")
+Label = "Paracord Knife"
+Texture = ExtResource("1_jcw7g")
+IsSecondary = false
+GrenadeType = 0
+IsKnife = true
+IsC4 = false

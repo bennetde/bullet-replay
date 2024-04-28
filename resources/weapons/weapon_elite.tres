@@ -1,0 +1,13 @@
+[gd_resource type="Resource" load_steps=3 format=3 uid="uid://b0imxfit4ki81"]
+
+[ext_resource type="Texture2D" uid="uid://bsl6ufaqqiw3u" path="res://img/weapons/elite.svg" id="1_duaps"]
+[ext_resource type="Script" path="res://src/resources/Weapon.cs" id="2_hg1x1"]
+
+[resource]
+script = ExtResource("2_hg1x1")
+Label = "Dual Berettas"
+Texture = ExtResource("1_duaps")
+IsSecondary = true
+GrenadeType = 0
+IsKnife = false
+IsC4 = false

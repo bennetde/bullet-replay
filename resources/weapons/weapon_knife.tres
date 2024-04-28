@@ -1,0 +1,13 @@
+[gd_resource type="Resource" load_steps=3 format=3 uid="uid://b000y0sx8631w"]
+
+[ext_resource type="Texture2D" uid="uid://bksbvyrrbsb7p" path="res://img/weapons/knife.svg" id="1_psouk"]
+[ext_resource type="Script" path="res://src/resources/Weapon.cs" id="2_c2qm8"]
+
+[resource]
+script = ExtResource("2_c2qm8")
+Label = "Knife"
+Texture = ExtResource("1_psouk")
+IsSecondary = false
+GrenadeType = 0
+IsKnife = true
+IsC4 = false

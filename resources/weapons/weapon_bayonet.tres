@@ -1,0 +1,13 @@
+[gd_resource type="Resource" load_steps=3 format=3 uid="uid://c4ee8s6i6d2rr"]
+
+[ext_resource type="Texture2D" uid="uid://ctprd1y1ghxdl" path="res://img/weapons/bayonet.svg" id="1_mhmvk"]
+[ext_resource type="Script" path="res://src/resources/Weapon.cs" id="2_2fol1"]
+
+[resource]
+script = ExtResource("2_2fol1")
+Label = "Bayonet"
+Texture = ExtResource("1_mhmvk")
+IsSecondary = false
+GrenadeType = 0
+IsKnife = true
+IsC4 = false

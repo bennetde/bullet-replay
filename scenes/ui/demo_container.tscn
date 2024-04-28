@@ -1,0 +1,217 @@
+[gd_scene load_steps=27 format=3 uid="uid://isguut6dcmh8"]
+
+[ext_resource type="Script" path="res://src/demo/DemoContainer.cs" id="1_2gbm1"]
+[ext_resource type="PackedScene" uid="uid://c1o03dc3hfaat" path="res://scenes/maps/de_ancient.tscn" id="1_7eohu"]
+[ext_resource type="PackedScene" uid="uid://dctc1mj7xptsb" path="res://scenes/ui/PlayerCards.tscn" id="1_i4kfu"]
+[ext_resource type="PackedScene" uid="uid://pogqxwy3brym" path="res://prefabs/camera.tscn" id="1_lbq20"]
+[ext_resource type="Texture2D" uid="uid://dmhm78a12b53f" path="res://img/icons/play.svg" id="3_7exh4"]
+[ext_resource type="Script" path="res://src/ui/PlayButton.gd" id="4_e5u1w"]
+[ext_resource type="Script" path="res://src/MapController.cs" id="4_shif5"]
+[ext_resource type="Texture2D" uid="uid://xye1qisew54b" path="res://img/icons/pause.svg" id="5_ef1jr"]
+[ext_resource type="PackedScene" uid="uid://cg2a65mgwx1hx" path="res://scenes/maps/de_anubis.tscn" id="5_j7hsy"]
+[ext_resource type="PackedScene" uid="uid://bk4yw7m5tjsvy" path="res://scenes/maps/de_inferno.tscn" id="6_vyw4y"]
+[ext_resource type="PackedScene" uid="uid://bekysrhh4s2rq" path="res://scenes/maps/de_mirage.tscn" id="7_w5ada"]
+[ext_resource type="PackedScene" uid="uid://bxrc5jfroxyyk" path="res://scenes/maps/de_nuke.tscn" id="8_8mctl"]
+[ext_resource type="PackedScene" uid="uid://j36li0qyoblw" path="res://scenes/maps/de_overpass.tscn" id="9_37lhw"]
+[ext_resource type="Script" path="res://src/PlayerEntitiesController.cs" id="10_ajkps"]
+[ext_resource type="PackedScene" uid="uid://dd1lhqr8qhl8j" path="res://prefabs/PlayerEntity.tscn" id="11_hmr30"]
+[ext_resource type="Script" path="res://src/GrenadeEntitiesController.cs" id="12_g87qv"]
+[ext_resource type="PackedScene" uid="uid://bqvqeit2oyh62" path="res://prefabs/SmokeGrenadeEntity.tscn" id="13_xwl02"]
+[ext_resource type="PackedScene" uid="uid://u3dh0e52kvul" path="res://prefabs/entities/he_grenade_entity.tscn" id="14_ayv8w"]
+[ext_resource type="PackedScene" uid="uid://bhtt35b1gptl4" path="res://prefabs/entities/bomb_entity.tscn" id="14_yw4wf"]
+[ext_resource type="PackedScene" uid="uid://ul0ihsne8ebv" path="res://prefabs/entities/flash_grenade_entity.tscn" id="15_44d2m"]
+[ext_resource type="PackedScene" uid="uid://fm475re8si5w" path="res://prefabs/entities/molotov_grenade_entity.tscn" id="16_7pm8x"]
+[ext_resource type="Script" path="res://src/PlaybackSpeedController.gd" id="17_y4our"]
+[ext_resource type="Theme" uid="uid://cmcpntdlndxul" path="res://resources/theme.tres" id="18_lkxje"]
+[ext_resource type="Script" path="res://src/ProgressBar.cs" id="19_j1uwj"]
+[ext_resource type="Script" path="res://src/ui/SelectRoundContainer.cs" id="23_yehrx"]
+[ext_resource type="PackedScene" uid="uid://j8ccvtkfn4v3" path="res://scenes/ui/round_button.tscn" id="24_qdlw1"]
+
+[node name="DemoContainer" type="Control" node_paths=PackedStringArray("DemoProgressBar", "MapController", "PlayerController", "GrenadeController", "MatchInfoPanel")]
+layout_mode = 3
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+script = ExtResource("1_2gbm1")
+DemoProgressBar = NodePath("HSplitContainer/GameViewContainer/VBoxContainer/Panel/VBoxContainer/HBoxContainer/DemoProgressBar")
+MapController = NodePath("HSplitContainer/GameViewContainer/VBoxContainer/Control/SubViewportContainer/SubViewport/MapController")
+PlayerController = NodePath("HSplitContainer/GameViewContainer/VBoxContainer/Control/SubViewportContainer/SubViewport/PlayerEntitiesController")
+GrenadeController = NodePath("HSplitContainer/GameViewContainer/VBoxContainer/Control/SubViewportContainer/SubViewport/GrenadeEntitiesController")
+MatchInfoPanel = NodePath("HSplitContainer/TabContainer/Round")
+
+[node name="HSplitContainer" type="HSplitContainer" parent="."]
+layout_mode = 1
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+split_offset = 1920
+
+[node name="GameViewContainer" type="Control" parent="HSplitContainer"]
+layout_mode = 2
+
+[node name="VBoxContainer" type="VBoxContainer" parent="HSplitContainer/GameViewContainer"]
+layout_mode = 1
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+
+[node name="Control" type="Control" parent="HSplitContainer/GameViewContainer/VBoxContainer"]
+layout_mode = 2
+size_flags_vertical = 3
+
+[node name="SubViewportContainer" type="SubViewportContainer" parent="HSplitContainer/GameViewContainer/VBoxContainer/Control"]
+layout_mode = 1
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+size_flags_vertical = 3
+stretch = true
+
+[node name="SubViewport" type="SubViewport" parent="HSplitContainer/GameViewContainer/VBoxContainer/Control/SubViewportContainer"]
+handle_input_locally = false
+size = Vector2i(2, 2)
+render_target_update_mode = 4
+
+[node name="Camera" parent="HSplitContainer/GameViewContainer/VBoxContainer/Control/SubViewportContainer/SubViewport" instance=ExtResource("1_lbq20")]
+position = Vector2(512, 512)
+zoom = Vector2(0.75, 0.75)
+
+[node name="MapController" type="Node" parent="HSplitContainer/GameViewContainer/VBoxContainer/Control/SubViewportContainer/SubViewport"]
+script = ExtResource("4_shif5")
+MapsDict = {
+"de_ancient": ExtResource("1_7eohu"),
+"de_anubis": ExtResource("5_j7hsy"),
+"de_inferno": ExtResource("6_vyw4y"),
+"de_mirage": ExtResource("7_w5ada"),
+"de_nuke": ExtResource("8_8mctl"),
+"de_overpass": ExtResource("9_37lhw")
+}
+
+[node name="PlayerEntitiesController" type="Node" parent="HSplitContainer/GameViewContainer/VBoxContainer/Control/SubViewportContainer/SubViewport" node_paths=PackedStringArray("DemoContainer", "MapController")]
+script = ExtResource("10_ajkps")
+DemoContainer = NodePath("../../../../../../..")
+MapController = NodePath("../MapController")
+EntityScene = ExtResource("11_hmr30")
+
+[node name="GrenadeEntitiesController" type="Node" parent="HSplitContainer/GameViewContainer/VBoxContainer/Control/SubViewportContainer/SubViewport" node_paths=PackedStringArray("DemoContainer", "MapController")]
+script = ExtResource("12_g87qv")
+DemoContainer = NodePath("../../../../../../..")
+MapController = NodePath("../MapController")
+SmokeEntityScene = ExtResource("13_xwl02")
+HEEntityScene = ExtResource("14_ayv8w")
+FlashEntityScene = ExtResource("15_44d2m")
+MolotovEntityScene = ExtResource("16_7pm8x")
+
+[node name="BombEntity" parent="HSplitContainer/GameViewContainer/VBoxContainer/Control/SubViewportContainer/SubViewport" node_paths=PackedStringArray("DemoContainer") instance=ExtResource("14_yw4wf")]
+DemoContainer = NodePath("../../../../../../..")
+
+[node name="LoadDemoPanel" type="Panel" parent="HSplitContainer/GameViewContainer/VBoxContainer/Control"]
+visible = false
+layout_mode = 1
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+
+[node name="VBoxContainer" type="VBoxContainer" parent="HSplitContainer/GameViewContainer/VBoxContainer/Control/LoadDemoPanel"]
+layout_mode = 1
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+alignment = 1
+
+[node name="Label" type="Label" parent="HSplitContainer/GameViewContainer/VBoxContainer/Control/LoadDemoPanel/VBoxContainer"]
+layout_mode = 2
+text = "Loading <MapName>"
+horizontal_alignment = 1
+
+[node name="ProgressBar" type="ProgressBar" parent="HSplitContainer/GameViewContainer/VBoxContainer/Control/LoadDemoPanel/VBoxContainer"]
+layout_mode = 2
+
+[node name="Panel" type="Panel" parent="HSplitContainer/GameViewContainer/VBoxContainer"]
+custom_minimum_size = Vector2(0, 63.145)
+layout_mode = 2
+
+[node name="VBoxContainer" type="VBoxContainer" parent="HSplitContainer/GameViewContainer/VBoxContainer/Panel"]
+layout_mode = 1
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+
+[node name="HBoxContainer" type="HBoxContainer" parent="HSplitContainer/GameViewContainer/VBoxContainer/Panel/VBoxContainer"]
+layout_mode = 2
+
+[node name="PlayButton" type="Button" parent="HSplitContainer/GameViewContainer/VBoxContainer/Panel/VBoxContainer/HBoxContainer"]
+custom_minimum_size = Vector2(30, 30)
+layout_mode = 2
+focus_mode = 0
+toggle_mode = true
+icon = ExtResource("5_ef1jr")
+flat = true
+icon_alignment = 1
+expand_icon = true
+script = ExtResource("4_e5u1w")
+play_button = ExtResource("5_ef1jr")
+pause_button = ExtResource("3_7exh4")
+
+[node name="DemoProgressBar" type="HSlider" parent="HSplitContainer/GameViewContainer/VBoxContainer/Panel/VBoxContainer/HBoxContainer" node_paths=PackedStringArray("_controller")]
+layout_mode = 2
+size_flags_horizontal = 3
+size_flags_vertical = 1
+tick_count = 25
+ticks_on_borders = true
+script = ExtResource("19_j1uwj")
+_controller = NodePath("../../../../../../..")
+
+[node name="PlaybackSpeedSelection" type="MenuButton" parent="HSplitContainer/GameViewContainer/VBoxContainer/Panel/VBoxContainer/HBoxContainer"]
+layout_mode = 2
+size_flags_horizontal = 0
+text = "1x"
+item_count = 6
+popup/item_0/text = "0.5x"
+popup/item_0/id = 0
+popup/item_1/text = "1x"
+popup/item_1/id = 1
+popup/item_2/text = "2x"
+popup/item_2/id = 2
+popup/item_3/text = "4x"
+popup/item_3/id = 3
+popup/item_4/text = "8x"
+popup/item_4/id = 4
+popup/item_5/text = "16x"
+popup/item_5/id = 5
+script = ExtResource("17_y4our")
+
+[node name="SelectRoundContainer" type="HBoxContainer" parent="HSplitContainer/GameViewContainer/VBoxContainer/Panel/VBoxContainer" node_paths=PackedStringArray("DemoContainer")]
+layout_mode = 2
+script = ExtResource("23_yehrx")
+DemoContainer = NodePath("../../../../../..")
+RoundSelectButton = ExtResource("24_qdlw1")
+
+[node name="TabContainer" type="TabContainer" parent="HSplitContainer"]
+layout_mode = 2
+theme = ExtResource("18_lkxje")
+
+[node name="Round" parent="HSplitContainer/TabContainer" node_paths=PackedStringArray("DemoContainer") instance=ExtResource("1_i4kfu")]
+custom_minimum_size = Vector2(300, 0)
+layout_mode = 2
+DemoContainer = NodePath("../../..")
+
+[connection signal="toggled" from="HSplitContainer/GameViewContainer/VBoxContainer/Panel/VBoxContainer/HBoxContainer/PlayButton" to="." method="SetPaused"]
+[connection signal="toggled" from="HSplitContainer/GameViewContainer/VBoxContainer/Panel/VBoxContainer/HBoxContainer/PlayButton" to="HSplitContainer/GameViewContainer/VBoxContainer/Panel/VBoxContainer/HBoxContainer/PlayButton" method="_on_toggled"]
+[connection signal="drag_ended" from="HSplitContainer/GameViewContainer/VBoxContainer/Panel/VBoxContainer/HBoxContainer/DemoProgressBar" to="HSplitContainer/GameViewContainer/VBoxContainer/Panel/VBoxContainer/HBoxContainer/DemoProgressBar" method="OnDragEnded"]
+[connection signal="drag_started" from="HSplitContainer/GameViewContainer/VBoxContainer/Panel/VBoxContainer/HBoxContainer/DemoProgressBar" to="HSplitContainer/GameViewContainer/VBoxContainer/Panel/VBoxContainer/HBoxContainer/DemoProgressBar" method="OnDragStarted"]
+[connection signal="on_playback_speed_changed" from="HSplitContainer/GameViewContainer/VBoxContainer/Panel/VBoxContainer/HBoxContainer/PlaybackSpeedSelection" to="." method="PlaybackSpeedChanged"]

@@ -1,0 +1,100 @@
+[gd_resource type="Resource" load_steps=48 format=3 uid="uid://chiwpdmwju2fu"]
+
+[ext_resource type="Script" path="res://src/singletons/WeaponsDictionary.cs" id="1_2fkyb"]
+[ext_resource type="Resource" uid="uid://bl2hgv3ldv6s4" path="res://resources/weapons/weapon_ak47.tres" id="1_n72o0"]
+[ext_resource type="Resource" uid="uid://sn0udym61nsi" path="res://resources/weapons/weapon_awp.tres" id="2_m62n1"]
+[ext_resource type="Resource" uid="uid://djdrr7utd5pav" path="res://resources/weapons/weapon_m4a4.tres" id="2_v68hu"]
+[ext_resource type="Resource" uid="uid://daq8ljl5m5a5i" path="res://resources/weapons/weapon_glock.tres" id="3_my4cc"]
+[ext_resource type="Resource" uid="uid://rtu0tuh8cmf2" path="res://resources/weapons/weapon_usp_silencer.tres" id="3_xtktm"]
+[ext_resource type="Resource" uid="uid://c58f66j7yf2h6" path="res://resources/weapons/weapon_m4a1.tres" id="5_b0oti"]
+[ext_resource type="Resource" uid="uid://3xue7lj3s0sx" path="res://resources/weapons/weapon_mp9.tres" id="5_nmpyy"]
+[ext_resource type="Resource" uid="uid://cyfqq68q718ir" path="res://resources/weapons/weapon_p250.tres" id="7_5muby"]
+[ext_resource type="Resource" uid="uid://bhrbnb4sbmm4b" path="res://resources/weapons/weapon_aug.tres" id="9_f3ecl"]
+[ext_resource type="Resource" uid="uid://beo5v36mhvfop" path="res://resources/weapons/weapon_deagle.tres" id="10_ac36b"]
+[ext_resource type="Resource" uid="uid://wbgi21lisi8b" path="res://resources/weapons/weapon_galil.tres" id="11_srin2"]
+[ext_resource type="Resource" uid="uid://csv2wr7n58yj7" path="res://resources/weapons/weapon_mac10.tres" id="12_nl334"]
+[ext_resource type="Resource" uid="uid://b000y0sx8631w" path="res://resources/weapons/weapon_knife.tres" id="13_hux5c"]
+[ext_resource type="Resource" uid="uid://c4ee8s6i6d2rr" path="res://resources/weapons/weapon_bayonet.tres" id="14_1paf4"]
+[ext_resource type="Resource" uid="uid://cdddkb6v8127f" path="res://resources/weapons/weapon_knife_tactical.tres" id="15_f5tis"]
+[ext_resource type="Resource" uid="uid://c0fqmioxq3rc1" path="res://resources/weapons/weapon_m9_bayonet.tres" id="16_dchjt"]
+[ext_resource type="Resource" uid="uid://b6i0nsch5wn8s" path="res://resources/weapons/weapon_knife_butterfly.tres" id="17_nifae"]
+[ext_resource type="Resource" uid="uid://dc3fxrtbsjei7" path="res://resources/weapons/weapon_knife_css.tres" id="18_aidmn"]
+[ext_resource type="Resource" uid="uid://du1vo56fvhhi1" path="res://resources/weapons/weapon_knife_cord.tres" id="19_orwgp"]
+[ext_resource type="Resource" uid="uid://sev8bswe6rvq" path="res://resources/weapons/weapon_smokegrenade.tres" id="20_vmn2e"]
+[ext_resource type="Resource" uid="uid://bwjyor3sn8pqb" path="res://resources/weapons/weapon_flashbang.tres" id="21_kh7hx"]
+[ext_resource type="Resource" uid="uid://drh4jm0btr3jj" path="res://resources/weapons/weapon_incgrenade.tres" id="22_8vmok"]
+[ext_resource type="Resource" uid="uid://ddcvtkfxy0y2x" path="res://resources/weapons/weapon_molotov.tres" id="23_ablbi"]
+[ext_resource type="Resource" uid="uid://lyb5hsy11uhr" path="res://resources/weapons/weapon_hegrenade.tres" id="24_hj0w5"]
+[ext_resource type="Resource" uid="uid://cywsq0gk21hc2" path="res://resources/weapons/weapon_tec9.tres" id="25_1125n"]
+[ext_resource type="Resource" uid="uid://b0imxfit4ki81" path="res://resources/weapons/weapon_elite.tres" id="26_b5vx1"]
+[ext_resource type="Resource" uid="uid://drljkqtql5p03" path="res://resources/weapons/weapon_c4.tres" id="27_skkwv"]
+[ext_resource type="Resource" uid="uid://dd7d82p0rdko2" path="res://resources/weapons/weapon_hkp2000.tres" id="28_115qs"]
+[ext_resource type="Resource" uid="uid://nxy7ukdogvdd" path="res://resources/weapons/weapon_knife_t.tres" id="29_cy68m"]
+[ext_resource type="Resource" uid="uid://2bcrtukv7vsa" path="res://resources/weapons/weapon_knife_outdoor.tres" id="30_sqql3"]
+[ext_resource type="Resource" uid="uid://bimbidgvkx3ah" path="res://resources/weapons/weapon_fiveseven.tres" id="31_vkwu5"]
+[ext_resource type="Resource" uid="uid://ceeslpk2w5j4i" path="res://resources/weapons/weapon_cz75a.tres" id="32_hptu2"]
+[ext_resource type="Resource" uid="uid://c2lx126qhwfi0" path="res://resources/weapons/weapon_revolver.tres" id="33_oi6wm"]
+[ext_resource type="Resource" uid="uid://ce5hrfern8me2" path="res://resources/weapons/weapon_mp7.tres" id="34_j8ua4"]
+[ext_resource type="Resource" uid="uid://cld42e088bdx3" path="res://resources/weapons/weapon_ump45.tres" id="35_eny76"]
+[ext_resource type="Resource" uid="uid://b8wqnwxwe6rrd" path="res://resources/weapons/weapon_p90.tres" id="36_rg5h6"]
+[ext_resource type="Resource" uid="uid://mxs8xy5obqkl" path="res://resources/weapons/weapon_bizon.tres" id="37_eid6l"]
+[ext_resource type="Resource" uid="uid://d1l73odycafes" path="res://resources/weapons/weapon_nova.tres" id="38_2cbmc"]
+[ext_resource type="Resource" uid="uid://c277gtbmdmfyu" path="res://resources/weapons/weapon_xm1014.tres" id="39_scfty"]
+[ext_resource type="Resource" uid="uid://c55j3cf31ulli" path="res://resources/weapons/weapon_sawedoff.tres" id="40_5f87i"]
+[ext_resource type="Resource" uid="uid://b5u6rgpfvxb7e" path="res://resources/weapons/weapon_m249.tres" id="41_hbkg8"]
+[ext_resource type="Resource" uid="uid://cv8eapvpke13g" path="res://resources/weapons/weapon_negev.tres" id="42_rywy0"]
+[ext_resource type="Resource" uid="uid://bcs0e5lg2m4yx" path="res://resources/weapons/weapon_ssg08.tres" id="43_wovyt"]
+[ext_resource type="Resource" uid="uid://bs1726e32ybvi" path="res://resources/weapons/weapon_sg553.tres" id="44_vp2s3"]
+[ext_resource type="Resource" uid="uid://d14jit8oisot8" path="res://resources/weapons/weagon_g3sg1.tres" id="45_qj46g"]
+[ext_resource type="Resource" uid="uid://cry3spaj3vb5a" path="res://resources/weapons/weagon_scar20.tres" id="46_ivufa"]
+
+[resource]
+script = ExtResource("1_2fkyb")
+Weapons = {
+"weapon_ak47": ExtResource("1_n72o0"),
+"weapon_aug": ExtResource("9_f3ecl"),
+"weapon_awp": ExtResource("2_m62n1"),
+"weapon_bayonet": ExtResource("14_1paf4"),
+"weapon_bizon": ExtResource("37_eid6l"),
+"weapon_c4": ExtResource("27_skkwv"),
+"weapon_cz75a": ExtResource("32_hptu2"),
+"weapon_deagle": ExtResource("10_ac36b"),
+"weapon_elite": ExtResource("26_b5vx1"),
+"weapon_fiveseven": ExtResource("31_vkwu5"),
+"weapon_flashbang": ExtResource("21_kh7hx"),
+"weapon_g3sg1": ExtResource("45_qj46g"),
+"weapon_galilar": ExtResource("11_srin2"),
+"weapon_glock": ExtResource("3_my4cc"),
+"weapon_hegrenade": ExtResource("24_hj0w5"),
+"weapon_hkp2000": ExtResource("28_115qs"),
+"weapon_incgrenade": ExtResource("22_8vmok"),
+"weapon_knife": ExtResource("13_hux5c"),
+"weapon_knife_butterfly": ExtResource("17_nifae"),
+"weapon_knife_cord": ExtResource("19_orwgp"),
+"weapon_knife_css": ExtResource("18_aidmn"),
+"weapon_knife_m9_bayonet": ExtResource("16_dchjt"),
+"weapon_knife_outdoor": ExtResource("30_sqql3"),
+"weapon_knife_t": ExtResource("29_cy68m"),
+"weapon_knife_tactical": ExtResource("15_f5tis"),
+"weapon_m249": ExtResource("41_hbkg8"),
+"weapon_m4a1": ExtResource("2_v68hu"),
+"weapon_m4a1_silencer": ExtResource("5_b0oti"),
+"weapon_mac10": ExtResource("12_nl334"),
+"weapon_molotov": ExtResource("23_ablbi"),
+"weapon_mp7": ExtResource("34_j8ua4"),
+"weapon_mp9": ExtResource("5_nmpyy"),
+"weapon_negev": ExtResource("42_rywy0"),
+"weapon_nova": ExtResource("38_2cbmc"),
+"weapon_p250": ExtResource("7_5muby"),
+"weapon_p90": ExtResource("36_rg5h6"),
+"weapon_revolver": ExtResource("33_oi6wm"),
+"weapon_sawedoff": ExtResource("40_5f87i"),
+"weapon_scar20": ExtResource("46_ivufa"),
+"weapon_sg556": ExtResource("44_vp2s3"),
+"weapon_smokegrenade": ExtResource("20_vmn2e"),
+"weapon_ssg08": ExtResource("43_wovyt"),
+"weapon_tec9": ExtResource("25_1125n"),
+"weapon_ump45": ExtResource("35_eny76"),
+"weapon_usp_silencer": ExtResource("3_xtktm"),
+"weapon_xm1014": ExtResource("39_scfty")
+}

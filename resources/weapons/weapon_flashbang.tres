@@ -1,0 +1,13 @@
+[gd_resource type="Resource" load_steps=3 format=3 uid="uid://bwjyor3sn8pqb"]
+
+[ext_resource type="Texture2D" uid="uid://v06a3fyhak37" path="res://img/weapons/flashbang.svg" id="1_3hi3r"]
+[ext_resource type="Script" path="res://src/resources/Weapon.cs" id="2_s02wx"]
+
+[resource]
+script = ExtResource("2_s02wx")
+Label = "Flashbang"
+Texture = ExtResource("1_3hi3r")
+IsSecondary = false
+GrenadeType = 2
+IsKnife = false
+IsC4 = false

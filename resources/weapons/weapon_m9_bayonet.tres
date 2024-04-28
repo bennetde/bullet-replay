@@ -1,0 +1,13 @@
+[gd_resource type="Resource" load_steps=3 format=3 uid="uid://c0fqmioxq3rc1"]
+
+[ext_resource type="Texture2D" uid="uid://yigck5guby1t" path="res://img/weapons/knife_m9_bayonet.svg" id="1_727lj"]
+[ext_resource type="Script" path="res://src/resources/Weapon.cs" id="2_ldd2w"]
+
+[resource]
+script = ExtResource("2_ldd2w")
+Label = "M9 Bayonet"
+Texture = ExtResource("1_727lj")
+IsSecondary = false
+GrenadeType = 0
+IsKnife = true
+IsC4 = false

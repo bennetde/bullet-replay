@@ -1,0 +1,7 @@
+[gd_scene load_steps=2 format=3 uid="uid://cg2a65mgwx1hx"]
+
+[ext_resource type="Texture2D" uid="uid://cv4gg2fqcnbgl" path="res://img/maps/de_anubis_radar_psd.png" id="1_rx7b5"]
+
+[node name="de_anubis" type="Sprite2D"]
+position = Vector2(512, 512)
+texture = ExtResource("1_rx7b5")

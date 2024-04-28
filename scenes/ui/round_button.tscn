@@ -1,0 +1,11 @@
+[gd_scene load_steps=3 format=3 uid="uid://j8ccvtkfn4v3"]
+
+[ext_resource type="Script" path="res://src/ui/RoundSelectButton.cs" id="1_lqnid"]
+[ext_resource type="Resource" uid="uid://sb3gwbfec7dv" path="res://resources/cs_colors.tres" id="2_w4ba1"]
+
+[node name="RoundButton" type="Button"]
+custom_minimum_size = Vector2(25, 25)
+text = "1"
+flat = true
+script = ExtResource("1_lqnid")
+Colors = ExtResource("2_w4ba1")

@@ -1,0 +1,13 @@
+[gd_resource type="Resource" load_steps=3 format=3 uid="uid://csv2wr7n58yj7"]
+
+[ext_resource type="Texture2D" uid="uid://cvcsbn11m5k7w" path="res://img/weapons/mac10.svg" id="1_qnvcu"]
+[ext_resource type="Script" path="res://src/resources/Weapon.cs" id="2_i82gv"]
+
+[resource]
+script = ExtResource("2_i82gv")
+Label = "MAC-10"
+Texture = ExtResource("1_qnvcu")
+IsSecondary = false
+GrenadeType = 0
+IsKnife = false
+IsC4 = false

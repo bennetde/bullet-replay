@@ -1,0 +1,13 @@
+[gd_resource type="Resource" load_steps=3 format=3 uid="uid://cv8eapvpke13g"]
+
+[ext_resource type="Texture2D" uid="uid://d1i5x13fdfvdj" path="res://img/weapons/negev.svg" id="1_wph47"]
+[ext_resource type="Script" path="res://src/resources/Weapon.cs" id="2_dok8y"]
+
+[resource]
+script = ExtResource("2_dok8y")
+Label = "Negev"
+Texture = ExtResource("1_wph47")
+IsSecondary = false
+GrenadeType = 0
+IsKnife = false
+IsC4 = false

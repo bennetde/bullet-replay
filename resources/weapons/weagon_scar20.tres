@@ -1,0 +1,13 @@
+[gd_resource type="Resource" load_steps=3 format=3 uid="uid://cry3spaj3vb5a"]
+
+[ext_resource type="Texture2D" uid="uid://8m2pg2qsltq7" path="res://img/weapons/scar20.svg" id="1_sq8h8"]
+[ext_resource type="Script" path="res://src/resources/Weapon.cs" id="2_8mqs5"]
+
+[resource]
+script = ExtResource("2_8mqs5")
+Label = "SCAR-20"
+Texture = ExtResource("1_sq8h8")
+IsSecondary = false
+GrenadeType = 0
+IsKnife = false
+IsC4 = false

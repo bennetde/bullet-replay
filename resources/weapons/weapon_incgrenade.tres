@@ -1,0 +1,13 @@
+[gd_resource type="Resource" load_steps=3 format=3 uid="uid://drh4jm0btr3jj"]
+
+[ext_resource type="Texture2D" uid="uid://02hoa37a2p3k" path="res://img/weapons/incgrenade.svg" id="1_l02t8"]
+[ext_resource type="Script" path="res://src/resources/Weapon.cs" id="2_4b76s"]
+
+[resource]
+script = ExtResource("2_4b76s")
+Label = "Incendiary Grenade"
+Texture = ExtResource("1_l02t8")
+IsSecondary = false
+GrenadeType = 4
+IsKnife = false
+IsC4 = false

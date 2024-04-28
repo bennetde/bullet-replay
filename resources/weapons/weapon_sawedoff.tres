@@ -1,0 +1,13 @@
+[gd_resource type="Resource" load_steps=3 format=3 uid="uid://c55j3cf31ulli"]
+
+[ext_resource type="Texture2D" uid="uid://d1tu7ox1sfwkb" path="res://img/weapons/sawedoff.svg" id="1_i4fh4"]
+[ext_resource type="Script" path="res://src/resources/Weapon.cs" id="2_6rigy"]
+
+[resource]
+script = ExtResource("2_6rigy")
+Label = "Sawed-Off"
+Texture = ExtResource("1_i4fh4")
+IsSecondary = false
+GrenadeType = 0
+IsKnife = false
+IsC4 = false

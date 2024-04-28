@@ -1,0 +1,76 @@
+[gd_scene load_steps=7 format=3 uid="uid://dctc1mj7xptsb"]
+
+[ext_resource type="Script" path="res://src/ui/MatchInfoPanel.cs" id="1_iyqd5"]
+[ext_resource type="PackedScene" uid="uid://cao6viy7jgbmu" path="res://scenes/ui/LeftPlayerCard.tscn" id="1_plnwi"]
+[ext_resource type="Script" path="res://src/ui/ScoreLabelController.cs" id="3_ewcog"]
+
+[sub_resource type="LabelSettings" id="LabelSettings_vkcec"]
+font_size = 46
+font_color = Color(0.941176, 0.788235, 0.254902, 1)
+
+[sub_resource type="LabelSettings" id="LabelSettings_wh1xj"]
+font_size = 46
+
+[sub_resource type="LabelSettings" id="LabelSettings_g2ixh"]
+font_size = 46
+font_color = Color(0.352941, 0.721569, 0.956863, 1)
+
+[node name="MatchInfoPanel" type="Panel" node_paths=PackedStringArray("CTsList", "TsList", "ScoreLabelController")]
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+script = ExtResource("1_iyqd5")
+PlayerCard = ExtResource("1_plnwi")
+CTsList = NodePath("VBoxContainer3/PlayersList/CTsList")
+TsList = NodePath("VBoxContainer3/PlayersList/TsList")
+ScoreLabelController = NodePath("VBoxContainer3/VBoxContainer2/Score")
+
+[node name="VBoxContainer3" type="VBoxContainer" parent="."]
+layout_mode = 1
+anchors_preset = 10
+anchor_right = 1.0
+grow_horizontal = 2
+
+[node name="VBoxContainer2" type="VBoxContainer" parent="VBoxContainer3"]
+layout_mode = 2
+
+[node name="Score" type="HBoxContainer" parent="VBoxContainer3/VBoxContainer2"]
+layout_mode = 2
+alignment = 1
+script = ExtResource("3_ewcog")
+
+[node name="TScoreLabel" type="Label" parent="VBoxContainer3/VBoxContainer2/Score"]
+layout_mode = 2
+text = "00"
+label_settings = SubResource("LabelSettings_vkcec")
+
+[node name="ScoreSeperator" type="Label" parent="VBoxContainer3/VBoxContainer2/Score"]
+layout_mode = 2
+text = " : "
+label_settings = SubResource("LabelSettings_wh1xj")
+
+[node name="CTScoreLabel" type="Label" parent="VBoxContainer3/VBoxContainer2/Score"]
+layout_mode = 2
+text = "00"
+label_settings = SubResource("LabelSettings_g2ixh")
+
+[node name="PlayersList" type="VBoxContainer" parent="VBoxContainer3"]
+layout_mode = 2
+
+[node name="CTs" type="Label" parent="VBoxContainer3/PlayersList"]
+layout_mode = 2
+text = "CTs:"
+
+[node name="CTsList" type="VBoxContainer" parent="VBoxContainer3/PlayersList"]
+unique_name_in_owner = true
+layout_mode = 2
+
+[node name="Ts" type="Label" parent="VBoxContainer3/PlayersList"]
+layout_mode = 2
+text = "Ts:"
+
+[node name="TsList" type="VBoxContainer" parent="VBoxContainer3/PlayersList"]
+unique_name_in_owner = true
+layout_mode = 2

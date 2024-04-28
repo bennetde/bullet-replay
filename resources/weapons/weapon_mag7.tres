@@ -1,0 +1,13 @@
+[gd_resource type="Resource" load_steps=3 format=3 uid="uid://bhp8mnee8e1jn"]
+
+[ext_resource type="Texture2D" uid="uid://dslagvn4mrx3l" path="res://img/weapons/mag7.svg" id="1_wksg0"]
+[ext_resource type="Script" path="res://src/resources/Weapon.cs" id="2_0grer"]
+
+[resource]
+script = ExtResource("2_0grer")
+Label = "MAG-7"
+Texture = ExtResource("1_wksg0")
+IsSecondary = false
+GrenadeType = 0
+IsKnife = false
+IsC4 = false

@@ -1,0 +1,13 @@
+[gd_resource type="Resource" load_steps=3 format=3 uid="uid://dflymkkffe7m"]
+
+[ext_resource type="Texture2D" uid="uid://cdb1lm86mng6y" path="res://img/weapons/mp5sd.svg" id="1_u08ke"]
+[ext_resource type="Script" path="res://src/resources/Weapon.cs" id="2_tpax6"]
+
+[resource]
+script = ExtResource("2_tpax6")
+Label = "MP5"
+Texture = ExtResource("1_u08ke")
+IsSecondary = false
+GrenadeType = 0
+IsKnife = false
+IsC4 = false

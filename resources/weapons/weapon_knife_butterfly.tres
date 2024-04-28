@@ -1,0 +1,13 @@
+[gd_resource type="Resource" load_steps=3 format=3 uid="uid://b6i0nsch5wn8s"]
+
+[ext_resource type="Texture2D" uid="uid://cyvcgcf5guqw3" path="res://img/weapons/knife_butterfly.svg" id="1_gi52k"]
+[ext_resource type="Script" path="res://src/resources/Weapon.cs" id="2_kkhtf"]
+
+[resource]
+script = ExtResource("2_kkhtf")
+Label = "Butterfly Knife"
+Texture = ExtResource("1_gi52k")
+IsSecondary = false
+GrenadeType = 0
+IsKnife = true
+IsC4 = false

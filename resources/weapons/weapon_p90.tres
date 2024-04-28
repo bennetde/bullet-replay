@@ -1,0 +1,13 @@
+[gd_resource type="Resource" load_steps=3 format=3 uid="uid://b8wqnwxwe6rrd"]
+
+[ext_resource type="Texture2D" uid="uid://tivafuxg0lgr" path="res://img/weapons/p90.svg" id="1_t36uu"]
+[ext_resource type="Script" path="res://src/resources/Weapon.cs" id="2_cvqr2"]
+
+[resource]
+script = ExtResource("2_cvqr2")
+Label = "P90"
+Texture = ExtResource("1_t36uu")
+IsSecondary = false
+GrenadeType = 0
+IsKnife = false
+IsC4 = false

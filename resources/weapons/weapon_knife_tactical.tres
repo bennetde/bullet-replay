@@ -1,0 +1,13 @@
+[gd_resource type="Resource" load_steps=3 format=3 uid="uid://cdddkb6v8127f"]
+
+[ext_resource type="Texture2D" uid="uid://dx83l410djts4" path="res://img/weapons/knife_tactical.svg" id="1_80tiy"]
+[ext_resource type="Script" path="res://src/resources/Weapon.cs" id="2_yruno"]
+
+[resource]
+script = ExtResource("2_yruno")
+Label = "Huntsman Knife"
+Texture = ExtResource("1_80tiy")
+IsSecondary = false
+GrenadeType = 0
+IsKnife = true
+IsC4 = false

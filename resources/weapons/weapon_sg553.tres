@@ -1,0 +1,13 @@
+[gd_resource type="Resource" load_steps=3 format=3 uid="uid://bs1726e32ybvi"]
+
+[ext_resource type="Texture2D" uid="uid://3kkxijlxinum" path="res://img/weapons/sg556.svg" id="1_b40vk"]
+[ext_resource type="Script" path="res://src/resources/Weapon.cs" id="2_u2s6g"]
+
+[resource]
+script = ExtResource("2_u2s6g")
+Label = "SG553"
+Texture = ExtResource("1_b40vk")
+IsSecondary = false
+GrenadeType = 0
+IsKnife = false
+IsC4 = false

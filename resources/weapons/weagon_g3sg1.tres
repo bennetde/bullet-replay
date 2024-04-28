@@ -1,0 +1,13 @@
+[gd_resource type="Resource" load_steps=3 format=3 uid="uid://d14jit8oisot8"]
+
+[ext_resource type="Texture2D" uid="uid://bk0slpktt0spg" path="res://img/weapons/g3sg1.svg" id="1_uhi54"]
+[ext_resource type="Script" path="res://src/resources/Weapon.cs" id="2_ph7f1"]
+
+[resource]
+script = ExtResource("2_ph7f1")
+Label = "G3SG1"
+Texture = ExtResource("1_uhi54")
+IsSecondary = false
+GrenadeType = 0
+IsKnife = false
+IsC4 = false

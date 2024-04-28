@@ -1,0 +1,13 @@
+[gd_resource type="Resource" load_steps=3 format=3 uid="uid://rtu0tuh8cmf2"]
+
+[ext_resource type="Texture2D" uid="uid://b136tftrcgcup" path="res://img/weapons/usp_silencer.svg" id="1_n15by"]
+[ext_resource type="Script" path="res://src/resources/Weapon.cs" id="2_etx8n"]
+
+[resource]
+script = ExtResource("2_etx8n")
+Label = "USP-S"
+Texture = ExtResource("1_n15by")
+IsSecondary = true
+GrenadeType = 0
+IsKnife = false
+IsC4 = false

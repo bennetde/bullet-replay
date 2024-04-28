@@ -1,0 +1,35 @@
+[gd_scene load_steps=4 format=3 uid="uid://ul0ihsne8ebv"]
+
+[ext_resource type="Script" path="res://src/entities/FlashGrenadeEntity.cs" id="1_vt4sl"]
+[ext_resource type="Texture2D" uid="uid://v06a3fyhak37" path="res://img/weapons/flashbang.svg" id="2_xs032"]
+
+[sub_resource type="LabelSettings" id="LabelSettings_0ypdt"]
+font_size = 11
+
+[node name="FlashGrenadeEntity" type="Node2D"]
+script = ExtResource("1_vt4sl")
+
+[node name="SmokeIcon" type="Sprite2D" parent="."]
+unique_name_in_owner = true
+texture = ExtResource("2_xs032")
+
+[node name="Label" type="Label" parent="."]
+visible = false
+anchors_preset = 5
+anchor_left = 0.5
+anchor_right = 0.5
+offset_left = -23.0
+offset_top = -11.0
+offset_right = 24.0
+offset_bottom = 12.0
+grow_horizontal = 2
+size_flags_horizontal = 2
+text = "20s"
+label_settings = SubResource("LabelSettings_0ypdt")
+horizontal_alignment = 1
+vertical_alignment = 1
+
+[node name="PoppedTimer" type="Timer" parent="."]
+wait_time = 20.0
+
+[connection signal="timeout" from="PoppedTimer" to="." method="Timeout"]

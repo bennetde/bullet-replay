@@ -1,0 +1,13 @@
+[gd_resource type="Resource" load_steps=3 format=3 uid="uid://bimbidgvkx3ah"]
+
+[ext_resource type="Texture2D" uid="uid://d051ymhturxt2" path="res://img/weapons/fiveseven.svg" id="1_kqada"]
+[ext_resource type="Script" path="res://src/resources/Weapon.cs" id="2_jamjl"]
+
+[resource]
+script = ExtResource("2_jamjl")
+Label = "Five-Seven"
+Texture = ExtResource("1_kqada")
+IsSecondary = true
+GrenadeType = 0
+IsKnife = false
+IsC4 = false

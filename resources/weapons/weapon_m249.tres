@@ -1,0 +1,13 @@
+[gd_resource type="Resource" load_steps=3 format=3 uid="uid://b5u6rgpfvxb7e"]
+
+[ext_resource type="Texture2D" uid="uid://cf2ubleo7eqlf" path="res://img/weapons/m249.svg" id="1_3bvsj"]
+[ext_resource type="Script" path="res://src/resources/Weapon.cs" id="2_q2x37"]
+
+[resource]
+script = ExtResource("2_q2x37")
+Label = "M249"
+Texture = ExtResource("1_3bvsj")
+IsSecondary = false
+GrenadeType = 0
+IsKnife = false
+IsC4 = false

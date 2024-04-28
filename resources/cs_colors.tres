@@ -1,0 +1,9 @@
+[gd_resource type="Resource" load_steps=2 format=3 uid="uid://sb3gwbfec7dv"]
+
+[ext_resource type="Script" path="res://src/resources/CSColors.cs" id="1_tyli4"]
+
+[resource]
+script = ExtResource("1_tyli4")
+CTColor = Color(0.227451, 0.45098, 1, 1)
+TColor = Color(0.941176, 0.788235, 0.254902, 1)
+BombCarrierColor = Color(1, 0.486275, 0, 1)

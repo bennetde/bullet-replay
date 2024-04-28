@@ -1,0 +1,65 @@
+[gd_scene load_steps=3 format=3 uid="uid://pvp5p6akwl14"]
+
+[sub_resource type="LabelSettings" id="LabelSettings_el8ll"]
+font_size = 21
+
+[sub_resource type="LabelSettings" id="LabelSettings_3fn6w"]
+font_size = 31
+
+[node name="RoundTimer" type="Control"]
+layout_mode = 3
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+
+[node name="Panel" type="Panel" parent="."]
+layout_mode = 1
+anchors_preset = 5
+anchor_left = 0.5
+anchor_right = 0.5
+offset_left = -87.0
+offset_right = 87.0
+offset_bottom = 59.0
+grow_horizontal = 2
+
+[node name="ScoreLabel" type="Label" parent="Panel"]
+layout_mode = 1
+anchors_preset = 5
+anchor_left = 0.5
+anchor_right = 0.5
+offset_left = -40.5
+offset_top = 28.0
+offset_right = 40.5
+offset_bottom = 72.0
+grow_horizontal = 2
+text = "0 - 0"
+label_settings = SubResource("LabelSettings_el8ll")
+horizontal_alignment = 1
+
+[node name="RoundTimeLabel" type="Label" parent="Panel"]
+layout_mode = 1
+anchors_preset = 5
+anchor_left = 0.5
+anchor_right = 0.5
+offset_left = -40.5
+offset_top = -7.0
+offset_right = 40.5
+offset_bottom = 37.0
+grow_horizontal = 2
+text = "01:45"
+label_settings = SubResource("LabelSettings_3fn6w")
+horizontal_alignment = 1
+
+[node name="ProgressBar" type="ProgressBar" parent="Panel"]
+layout_mode = 1
+anchors_preset = 5
+anchor_left = 0.5
+anchor_right = 0.5
+offset_left = -178.5
+offset_top = 66.0
+offset_right = 178.5
+offset_bottom = 93.0
+grow_horizontal = 2
+value = 100.0

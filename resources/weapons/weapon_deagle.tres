@@ -1,0 +1,12 @@
+[gd_resource type="Resource" load_steps=3 format=3 uid="uid://beo5v36mhvfop"]
+
+[ext_resource type="Texture2D" uid="uid://dfqxvr0vt1q0w" path="res://img/weapons/deagle.svg" id="1_x5nea"]
+[ext_resource type="Script" path="res://src/resources/Weapon.cs" id="2_g7y1i"]
+
+[resource]
+script = ExtResource("2_g7y1i")
+Label = "Deagle"
+Texture = ExtResource("1_x5nea")
+IsSecondary = true
+GrenadeType = 0
+IsKnife = false

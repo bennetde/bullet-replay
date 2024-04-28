@@ -1,0 +1,13 @@
+[gd_resource type="Resource" load_steps=3 format=3 uid="uid://c2lx126qhwfi0"]
+
+[ext_resource type="Texture2D" uid="uid://brypsh5nj0fdp" path="res://img/weapons/revolver.svg" id="1_l50k2"]
+[ext_resource type="Script" path="res://src/resources/Weapon.cs" id="2_cipk4"]
+
+[resource]
+script = ExtResource("2_cipk4")
+Label = "R8 Revolver"
+Texture = ExtResource("1_l50k2")
+IsSecondary = true
+GrenadeType = 0
+IsKnife = false
+IsC4 = false

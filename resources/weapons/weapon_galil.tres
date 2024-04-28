@@ -1,0 +1,13 @@
+[gd_resource type="Resource" load_steps=3 format=3 uid="uid://wbgi21lisi8b"]
+
+[ext_resource type="Texture2D" uid="uid://fravb58xhgos" path="res://img/weapons/galilar.svg" id="1_cwiu3"]
+[ext_resource type="Script" path="res://src/resources/Weapon.cs" id="2_sq73h"]
+
+[resource]
+script = ExtResource("2_sq73h")
+Label = "Galil"
+Texture = ExtResource("1_cwiu3")
+IsSecondary = false
+GrenadeType = 0
+IsKnife = false
+IsC4 = false

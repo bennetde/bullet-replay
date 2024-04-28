@@ -1,0 +1,7 @@
+[gd_scene load_steps=2 format=3 uid="uid://bk4yw7m5tjsvy"]
+
+[ext_resource type="Texture2D" uid="uid://tlpxft7d3pf7" path="res://img/maps/de_inferno_radar_psd.png" id="1_2vlqc"]
+
+[node name="de_inferno" type="Sprite2D"]
+position = Vector2(512, 512)
+texture = ExtResource("1_2vlqc")

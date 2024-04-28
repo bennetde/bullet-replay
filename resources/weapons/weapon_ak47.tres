@@ -1,0 +1,13 @@
+[gd_resource type="Resource" load_steps=3 format=3 uid="uid://bl2hgv3ldv6s4"]
+
+[ext_resource type="Texture2D" uid="uid://bfsxfbqh5htmw" path="res://img/weapons/ak47.svg" id="1_h4tkl"]
+[ext_resource type="Script" path="res://src/resources/Weapon.cs" id="2_3hrhn"]
+
+[resource]
+script = ExtResource("2_3hrhn")
+Label = "AK47"
+Texture = ExtResource("1_h4tkl")
+IsSecondary = false
+GrenadeType = 0
+IsKnife = false
+IsC4 = false

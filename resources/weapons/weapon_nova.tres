@@ -1,0 +1,13 @@
+[gd_resource type="Resource" load_steps=3 format=3 uid="uid://d1l73odycafes"]
+
+[ext_resource type="Texture2D" uid="uid://hb0bf8gvsmgo" path="res://img/weapons/nova.svg" id="1_nii6r"]
+[ext_resource type="Script" path="res://src/resources/Weapon.cs" id="2_t1wke"]
+
+[resource]
+script = ExtResource("2_t1wke")
+Label = "Nova"
+Texture = ExtResource("1_nii6r")
+IsSecondary = false
+GrenadeType = 0
+IsKnife = false
+IsC4 = false

@@ -1,0 +1,13 @@
+[gd_resource type="Resource" load_steps=3 format=3 uid="uid://ceeslpk2w5j4i"]
+
+[ext_resource type="Texture2D" uid="uid://fgbmqy0gka83" path="res://img/weapons/cz75a.svg" id="1_v3kmk"]
+[ext_resource type="Script" path="res://src/resources/Weapon.cs" id="2_jsaro"]
+
+[resource]
+script = ExtResource("2_jsaro")
+Label = "CZ"
+Texture = ExtResource("1_v3kmk")
+IsSecondary = true
+GrenadeType = 0
+IsKnife = false
+IsC4 = false

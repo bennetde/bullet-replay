@@ -1,0 +1,13 @@
+[gd_resource type="Resource" load_steps=3 format=3 uid="uid://ddcvtkfxy0y2x"]
+
+[ext_resource type="Texture2D" uid="uid://bqvwwviqjs3mg" path="res://img/weapons/molotov.svg" id="1_b5x5i"]
+[ext_resource type="Script" path="res://src/resources/Weapon.cs" id="2_8ui7d"]
+
+[resource]
+script = ExtResource("2_8ui7d")
+Label = "Molotv"
+Texture = ExtResource("1_b5x5i")
+IsSecondary = false
+GrenadeType = 4
+IsKnife = false
+IsC4 = false

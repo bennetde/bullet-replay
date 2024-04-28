@@ -1,0 +1,7 @@
+[gd_scene load_steps=2 format=3 uid="uid://bekysrhh4s2rq"]
+
+[ext_resource type="Texture2D" uid="uid://2xrj1msvhybk" path="res://img/maps/de_mirage_radar_psd.png" id="1_1knss"]
+
+[node name="de_mirage" type="Sprite2D"]
+position = Vector2(512, 512)
+texture = ExtResource("1_1knss")

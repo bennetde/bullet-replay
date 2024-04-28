@@ -1,0 +1,7 @@
+[gd_scene load_steps=2 format=3 uid="uid://bxrc5jfroxyyk"]
+
+[ext_resource type="Texture2D" uid="uid://cce3ka74vlpi7" path="res://img/maps/de_nuke_radar_psd.png" id="1_bt2ut"]
+
+[node name="de_nuke" type="Sprite2D"]
+position = Vector2(512, 512)
+texture = ExtResource("1_bt2ut")

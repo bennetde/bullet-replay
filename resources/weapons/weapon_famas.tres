@@ -1,0 +1,12 @@
+[gd_resource type="Resource" load_steps=3 format=3 uid="uid://bfcsf0jd3ivtp"]
+
+[ext_resource type="Texture2D" uid="uid://cu4fg16tp46sx" path="res://img/weapons/famas.svg" id="1_0utvq"]
+[ext_resource type="Script" path="res://src/resources/Weapon.cs" id="2_b71ck"]
+
+[resource]
+script = ExtResource("2_b71ck")
+Label = "Famas"
+Texture = ExtResource("1_0utvq")
+IsSecondary = false
+GrenadeType = 0
+IsKnife = false
