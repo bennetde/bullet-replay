@@ -10,3 +10,4 @@ Texture = ExtResource("1_0utvq")
 IsSecondary = false
 GrenadeType = 0
 IsKnife = false
+IsC4 = false

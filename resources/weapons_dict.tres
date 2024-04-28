@@ -1,4 +1,4 @@
-[gd_resource type="Resource" load_steps=48 format=3 uid="uid://chiwpdmwju2fu"]
+[gd_resource type="Resource" load_steps=49 format=3 uid="uid://chiwpdmwju2fu"]
 
 [ext_resource type="Script" path="res://src/singletons/WeaponsDictionary.cs" id="1_2fkyb"]
 [ext_resource type="Resource" uid="uid://bl2hgv3ldv6s4" path="res://resources/weapons/weapon_ak47.tres" id="1_n72o0"]
@@ -47,6 +47,7 @@
 [ext_resource type="Resource" uid="uid://bs1726e32ybvi" path="res://resources/weapons/weapon_sg553.tres" id="44_vp2s3"]
 [ext_resource type="Resource" uid="uid://d14jit8oisot8" path="res://resources/weapons/weagon_g3sg1.tres" id="45_qj46g"]
 [ext_resource type="Resource" uid="uid://cry3spaj3vb5a" path="res://resources/weapons/weagon_scar20.tres" id="46_ivufa"]
+[ext_resource type="Resource" uid="uid://bfcsf0jd3ivtp" path="res://resources/weapons/weapon_famas.tres" id="47_po8kr"]
 
 [resource]
 script = ExtResource("1_2fkyb")
@@ -60,6 +61,7 @@ Weapons = {
 "weapon_cz75a": ExtResource("32_hptu2"),
 "weapon_deagle": ExtResource("10_ac36b"),
 "weapon_elite": ExtResource("26_b5vx1"),
+"weapon_famas": ExtResource("47_po8kr"),
 "weapon_fiveseven": ExtResource("31_vkwu5"),
 "weapon_flashbang": ExtResource("21_kh7hx"),
 "weapon_g3sg1": ExtResource("45_qj46g"),
