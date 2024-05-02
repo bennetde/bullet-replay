@@ -1,0 +1,76 @@
+[gd_scene load_steps=8 format=3 uid="uid://btjejdaacarkg"]
+
+[ext_resource type="Theme" uid="uid://cmcpntdlndxul" path="res://resources/theme.tres" id="1_eeflv"]
+[ext_resource type="Script" path="res://src/ui/FileMenuButton.gd" id="2_kol7k"]
+[ext_resource type="Shortcut" uid="uid://cm5x8o7d88wlx" path="res://resources/quit_shortcut.tres" id="3_2pai5"]
+[ext_resource type="Script" path="res://src/ui/DemosTabContainer.cs" id="4_tovkj"]
+[ext_resource type="PackedScene" uid="uid://isguut6dcmh8" path="res://scenes/ui/demo_container.tscn" id="5_i4vbm"]
+
+[sub_resource type="InputEventKey" id="InputEventKey_cg10s"]
+device = -1
+ctrl_pressed = true
+keycode = 79
+
+[sub_resource type="Shortcut" id="Shortcut_f8ux2"]
+events = [SubResource("InputEventKey_cg10s")]
+
+[node name="GUI" type="CanvasLayer"]
+
+[node name="Background" type="Panel" parent="."]
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+
+[node name="VBoxContainer" type="VBoxContainer" parent="Background"]
+layout_mode = 1
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+
+[node name="TopBar" type="Panel" parent="Background/VBoxContainer"]
+custom_minimum_size = Vector2(0, 40)
+layout_mode = 2
+
+[node name="HBoxContainer" type="HBoxContainer" parent="Background/VBoxContainer/TopBar"]
+layout_mode = 0
+offset_right = 40.0
+offset_bottom = 40.0
+
+[node name="FileMenuButton" type="MenuButton" parent="Background/VBoxContainer/TopBar/HBoxContainer"]
+layout_mode = 2
+theme = ExtResource("1_eeflv")
+text = "File"
+script = ExtResource("2_kol7k")
+open_shortcut = SubResource("Shortcut_f8ux2")
+quit_shortcut = ExtResource("3_2pai5")
+
+[node name="FileDialog" type="FileDialog" parent="Background/VBoxContainer/TopBar/HBoxContainer/FileMenuButton"]
+title = "Open a File"
+position = Vector2i(0, 36)
+size = Vector2i(335, 159)
+ok_button_text = "Open"
+file_mode = 0
+access = 2
+use_native_dialog = true
+
+[node name="HelpMenuButton" type="MenuButton" parent="Background/VBoxContainer/TopBar/HBoxContainer"]
+layout_mode = 2
+theme = ExtResource("1_eeflv")
+text = "Help"
+item_count = 2
+popup/item_0/text = "About"
+popup/item_0/id = 0
+popup/item_1/text = "Report a Bug"
+popup/item_1/id = 1
+
+[node name="DemosTabContainer" type="TabContainer" parent="Background/VBoxContainer"]
+layout_mode = 2
+size_flags_vertical = 3
+script = ExtResource("4_tovkj")
+DemoContainer = ExtResource("5_i4vbm")
+
+[connection signal="file_selected" from="Background/VBoxContainer/TopBar/HBoxContainer/FileMenuButton/FileDialog" to="Background/VBoxContainer/DemosTabContainer" method="OnFileSelected"]
