@@ -16,11 +16,11 @@ Note: This is a very early Alpha. Expect crashes & bugs.
 | On-Screen Drawing                                 | 🟨 Partial support |
 | Full Grenade support                              | ➖ Planned         |
 
-# Disclaimer
+## Disclaimer
 
 This project is not affiliated with or endorsed by Valve Corporation.
 
-# Acknowledgement
+## Acknowledgement
 
 Developing this tool would not have been possible without the great work of many people. Notably:
 - [DemoFile.Net](https://github.com/saul/demofile-net)
