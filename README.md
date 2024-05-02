@@ -20,6 +20,15 @@ Note: This is a very early Alpha. Expect crashes & bugs.
 
 This project is not affiliated with or endorsed by Valve Corporation.
 
+## Controls
+
+| Function         | Keybind                                              |
+|------------------|------------------------------------------------------|
+| Move Camera      | Press Mouse-Wheel Button and Move your Mouse         |
+| Zoom In/Out      | Scroll with Mouse-Wheel                              |
+| Draw             | Hold Left Mouse Button                               |
+| Undo Last-Stroke | CTRL + Z                                             |
+
 ## Acknowledgement
 
 Developing this tool would not have been possible without the great work of many people. Notably:
