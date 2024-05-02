@@ -1,0 +1,13 @@
+[gd_resource type="Resource" load_steps=3 format=3 uid="uid://drx6slirk3lna"]
+
+[ext_resource type="Texture2D" uid="uid://dv4l3rrjnfwlb" path="res://img/weapons/decoy.svg" id="1_ed7dw"]
+[ext_resource type="Script" path="res://src/resources/Weapon.cs" id="2_jqryf"]
+
+[resource]
+script = ExtResource("2_jqryf")
+Label = "Decoy"
+Texture = ExtResource("1_ed7dw")
+IsSecondary = false
+GrenadeType = 5
+IsKnife = false
+IsC4 = false

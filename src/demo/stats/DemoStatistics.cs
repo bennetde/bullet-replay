@@ -37,15 +37,20 @@ public class DemoStatistics
 
 	private void OnRoundEnd(Source1RoundEndEvent e)
 	{
+		// HACK: Find out a proper way to detect knife rounds. RoundStartEvent is not called on the first round in some cases.
+		// Only first round should be a Knife Round
 		bool isKnife = Demo.FileHeader.ServerName.Contains("FACEIT") && Rounds.Count == 0;
+		
 		var roundEndTick = Demo.CurrentDemoTick.Value;
 		var winningTeam = (CSTeamNumber)e.Winner;
+		
+		// Move the start tick for the first round forward a bit, so that PlayerControllers aren't created very time the user skips to the first round.
 		if (LatestRoundStartTick == 0)
 		{
 			LatestRoundStartTick = 100;
 		}
+		
 		Rounds.Add(new Round(LatestRoundStartTick, roundEndTick, winningTeam, isKnife));
-		GD.Print($"Add round {Rounds.Last().ToString()}");
 	}
 
 	public static async Task<DemoStatistics> CreateDemoStatistics(string demoPath)
