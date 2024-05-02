@@ -1,4 +1,4 @@
-[gd_scene load_steps=27 format=3 uid="uid://isguut6dcmh8"]
+[gd_scene load_steps=28 format=3 uid="uid://isguut6dcmh8"]
 
 [ext_resource type="Script" path="res://src/demo/DemoContainer.cs" id="1_2gbm1"]
 [ext_resource type="PackedScene" uid="uid://c1o03dc3hfaat" path="res://scenes/maps/de_ancient.tscn" id="1_7eohu"]
@@ -23,6 +23,7 @@
 [ext_resource type="PackedScene" uid="uid://fm475re8si5w" path="res://prefabs/entities/molotov_grenade_entity.tscn" id="16_7pm8x"]
 [ext_resource type="Script" path="res://src/PlaybackSpeedController.gd" id="17_y4our"]
 [ext_resource type="Theme" uid="uid://cmcpntdlndxul" path="res://resources/theme.tres" id="18_lkxje"]
+[ext_resource type="Script" path="res://src/draw/Draw.gd" id="18_ur71m"]
 [ext_resource type="Script" path="res://src/ProgressBar.cs" id="19_j1uwj"]
 [ext_resource type="Script" path="res://src/ui/SelectRoundContainer.cs" id="23_yehrx"]
 [ext_resource type="PackedScene" uid="uid://j8ccvtkfn4v3" path="res://scenes/ui/round_button.tscn" id="24_qdlw1"]
@@ -77,12 +78,8 @@ stretch = true
 
 [node name="SubViewport" type="SubViewport" parent="HSplitContainer/GameViewContainer/VBoxContainer/Control/SubViewportContainer"]
 handle_input_locally = false
-size = Vector2i(2, 2)
+size = Vector2i(840, 733)
 render_target_update_mode = 4
-
-[node name="Camera" parent="HSplitContainer/GameViewContainer/VBoxContainer/Control/SubViewportContainer/SubViewport" instance=ExtResource("1_lbq20")]
-position = Vector2(512, 512)
-zoom = Vector2(0.75, 0.75)
 
 [node name="MapController" type="Node" parent="HSplitContainer/GameViewContainer/VBoxContainer/Control/SubViewportContainer/SubViewport"]
 script = ExtResource("4_shif5")
@@ -112,6 +109,16 @@ MolotovEntityScene = ExtResource("16_7pm8x")
 
 [node name="BombEntity" parent="HSplitContainer/GameViewContainer/VBoxContainer/Control/SubViewportContainer/SubViewport" node_paths=PackedStringArray("DemoContainer") instance=ExtResource("14_yw4wf")]
 DemoContainer = NodePath("../../../../../../..")
+
+[node name="Draw" type="Node2D" parent="HSplitContainer/GameViewContainer/VBoxContainer/Control/SubViewportContainer/SubViewport" node_paths=PackedStringArray("camera")]
+script = ExtResource("18_ur71m")
+camera = NodePath("../Camera")
+
+[node name="Lines" type="Node2D" parent="HSplitContainer/GameViewContainer/VBoxContainer/Control/SubViewportContainer/SubViewport/Draw"]
+
+[node name="Camera" parent="HSplitContainer/GameViewContainer/VBoxContainer/Control/SubViewportContainer/SubViewport" instance=ExtResource("1_lbq20")]
+position = Vector2(512, 512)
+zoom = Vector2(0.75, 0.75)
 
 [node name="LoadDemoPanel" type="Panel" parent="HSplitContainer/GameViewContainer/VBoxContainer/Control"]
 visible = false
