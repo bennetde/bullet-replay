@@ -13,7 +13,7 @@ Note: This is a very early Alpha. Expect crashes & bugs.
 | Skip between rounds                               | ✅                 |
 | Open and review multiple demos at the same time   | ✅                 |
 | Web Support                                       | ➖ Planned         |
-| On-Screen Drawing                                 | ➖ Planned         |
+| On-Screen Drawing                                 | 🟨 Partial support |
 | Full Grenade support                              | ➖ Planned         |
 
 # Disclaimer
