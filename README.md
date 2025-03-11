@@ -1,4 +1,5 @@
 # Bullet Replay
+Archived because I currently do not have a need for a custom replay tool anymore.
 
 A quick and simple demo replay tool for Counter-Strike 2.
 Note: This is a very early Alpha. Expect crashes & bugs.
